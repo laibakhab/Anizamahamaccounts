@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   { image: "/images/r1.jpeg" },          
@@ -23,6 +24,7 @@ const Testimonials = () => {
   const [current, setCurrent] = useState(0);
 
   const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
+  const prev = () => setCurrent((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
 
   // Auto-play feature
   useEffect(() => {
@@ -77,6 +79,47 @@ const Testimonials = () => {
                 </div>
               </motion.div>
             </AnimatePresence>
+          </div>
+
+          {/* Navigation Controls */}
+          <div className="mt-12 flex flex-col items-center gap-6">
+            <div className="flex items-center gap-8">
+              <button 
+                onClick={prev}
+                className="p-3 rounded-full bg-white shadow-lg border border-border-custom text-navy hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft className="w-6 h-6 group-active:scale-90 transition-transform" />
+              </button>
+              
+              <div className="flex items-center gap-2 font-bold text-navy bg-white px-6 py-2 rounded-full shadow-md border border-border-custom">
+                <span className="text-primary text-xl">{current + 1}</span>
+                <span className="opacity-30">/</span>
+                <span className="opacity-60">{testimonials.length}</span>
+              </div>
+
+              <button 
+                onClick={next}
+                className="p-3 rounded-full bg-white shadow-lg border border-border-custom text-navy hover:bg-primary hover:text-white transition-all duration-300 group cursor-pointer"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight className="w-6 h-6 group-active:scale-90 transition-transform" />
+              </button>
+            </div>
+
+            {/* Indicator Dots (Optional but good for visual) */}
+            <div className="flex gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrent(index)}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    current === index ? "w-8 bg-primary" : "w-2 bg-navy/20 hover:bg-navy/40"
+                  }`}
+                  aria-label={`Go to testimonial ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
