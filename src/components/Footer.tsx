@@ -101,20 +101,20 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Fiverr Promotion */}
+          {/* Column 4: Consultation */}
           <div>
-            <h4 className="font-black text-navy text-lg mb-8 uppercase tracking-widest text-sm">Hire Me</h4>
+            <h4 className="font-black text-navy text-lg mb-8 uppercase tracking-widest text-sm">Consultation</h4>
             <div className="bg-secondary-bg p-6 rounded-[24px] border border-border-custom">
-              <p className="text-navy font-bold mb-4">Work with me on Fiverr</p>
+              <p className="text-navy font-bold mb-4">Book a Strategy Call</p>
               <p className="text-secondary-text text-sm mb-6 leading-relaxed">
-                Secure payments and 100% satisfaction guaranteed through Fiverr's platform.
+                Schedule your free 30-minute complementary consultation to discuss your business.
               </p>
               <Link
-                href="https://www.fiverr.com/s/pdKEdLR"
+                href="https://calendly.com/ledgerly247/30min"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-navy text-white px-5 py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all shadow-lg"
               >
-                View My Gig
+                Book Session
                 <ExternalLink size={14} />
               </Link>
             </div>

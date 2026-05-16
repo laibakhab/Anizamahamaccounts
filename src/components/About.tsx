@@ -59,7 +59,7 @@ const About = () => {
                 I specialize in high-quality bookkeeping services that strictly comply with international standards, including <span className="text-navy font-bold">IFRS, IASB, FASB, and IFAC</span>. Whether it's catching up on months of overdue books or setting up robust financial systems, I ensure your records are 100% accurate and audit-ready.
               </p>
               <p>
-                As a <span className="text-primary font-bold">Fiverr Level 2 Seller</span>, I am committed to delivering premium results that are both cost-effective and highly secure, ensuring your financial data remains confidential at all times.
+                I am committed to delivering premium results that are both cost-effective and highly secure, ensuring your financial data remains confidential at all times.
               </p>
             </div>
 
@@ -83,11 +83,11 @@ const About = () => {
 
             <div className="flex flex-wrap gap-6">
               <Link
-                href="https://www.fiverr.com/s/pdKEdLR"
+                href="https://calendly.com/ledgerly247/30min"
                 target="_blank"
                 className="bg-primary text-white px-10 py-5 rounded-[20px] font-bold text-lg hover:bg-navy transition-all shadow-xl shadow-primary/20"
               >
-                Hire Me on Fiverr
+                Free 30-Min Consultation
               </Link>
             </div>
           </motion.div>

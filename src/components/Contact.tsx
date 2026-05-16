@@ -8,7 +8,8 @@ import {
   ExternalLink, 
   Phone,
   CheckCircle2,
-  Loader2
+  Loader2,
+  CalendarDays
 } from "lucide-react";
 import Link from "next/link";
 
@@ -70,17 +71,17 @@ const Contact = () => {
 
               <div className="space-y-4">
                 <Link
-                  href="https://www.fiverr.com/s/pdKEdLR"
+                  href="https://calendly.com/ledgerly247/30min"
                   target="_blank"
                   className="flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-green-500/10 text-green-600 rounded-full flex items-center justify-center">
-                      <ExternalLink size={24} />
+                    <div className="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center">
+                      <CalendarDays size={24} />
                     </div>
                     <div>
-                      <p className="font-bold text-navy">Hire on Fiverr</p>
-                      <p className="text-xs text-secondary-text font-medium uppercase tracking-widest">Secure Platform</p>
+                      <p className="font-bold text-navy">Book a Consultation</p>
+                      <p className="text-xs text-secondary-text font-medium uppercase tracking-widest">Free 30-Min Session</p>
                     </div>
                   </div>
                   <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">

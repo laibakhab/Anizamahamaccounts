@@ -42,17 +42,17 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-secondary-text mb-10 leading-relaxed max-w-xl">
-              I provide accurate, reliable, and tax-ready bookkeeping services so you can focus on growing your business.
+              Trusted by construction companies, architects, attorneys, designers, consultants, and small businesses in New York City, Miami, and London.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-12">
+            <div className="flex flex-wrap gap-4 mb-8">
               <Link
-                href="https://www.fiverr.com/s/pdKEdLR"
+                href="https://calendly.com/ledgerly247/30min"
                 target="_blank"
                 className="bg-primary text-white px-8 py-4 rounded-[20px] font-bold text-lg hover:bg-navy transition-all shadow-xl shadow-primary/20 flex items-center group"
               >
-                Hire Me on Fiverr
+                Free 30-Min Consultation
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
               <motion.button 
@@ -66,23 +66,25 @@ const Hero = () => {
                 </div>
                 Watch Intro
               </motion.button>
+            </div>
 
-              <Link
-                href="https://wa.me/923155130326"
-                target="_blank"
-                className="flex items-center gap-2 font-bold text-navy hover:text-[#25D366] transition-colors group px-2"
-              >
-                <MessageCircle size={20} className="text-[#25D366]" />
-                <span className="border-b-2 border-transparent group-hover:border-[#25D366] transition-all">
-                  Get Free Consultation
-                </span>
-              </Link>
+            {/* Global Presence Badge */}
+            <div className="flex items-center gap-2 mb-12 bg-accent-blue/50 w-fit px-4 py-2 rounded-full border border-primary/10">
+              <div className="flex -space-x-2">
+                <div className="w-6 h-6 rounded-full bg-white border-2 border-accent-blue flex items-center justify-center overflow-hidden">
+                  <span className="text-[10px]">🇺🇸</span>
+                </div>
+                <div className="w-6 h-6 rounded-full bg-white border-2 border-accent-blue flex items-center justify-center overflow-hidden">
+                  <span className="text-[10px]">🇵🇰</span>
+                </div>
+              </div>
+              <span className="text-sm font-bold text-navy">Offices in New York & Pakistan</span>
             </div>
 
             {/* Trust Badges */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-border-custom">
               {[
-                "Fiverr Level 2 Seller",
+                "Certified Accountant",
                 "100% Client Satisfaction",
                 "Tax Ready Books",
                 "IFRS Compliant"

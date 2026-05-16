@@ -49,7 +49,7 @@ export default function TermsOfService() {
       <section id="engagement">
         <h2>3. Professional Engagement</h2>
         <p>
-          The information on this website is intended for portfolio and informational purposes. Accessing this website or submitting a contact form does not constitute a formal accountant-client relationship. A professional engagement is only established upon the acceptance of a specific proposal or the purchase of a service gig through authorized platforms like <strong>Fiverr</strong>.
+          The information on this website is intended for portfolio and informational purposes. Accessing this website or submitting a contact form does not constitute a formal accountant-client relationship. A professional engagement is only established upon the acceptance of a specific written proposal and the execution of a service agreement.
         </p>
       </section>
 
@@ -82,9 +82,9 @@ export default function TermsOfService() {
       </section>
 
       <section id="third-party">
-        <h2>8. Third-Party Platforms</h2>
+        <h2>8. Third-Party Links</h2>
         <p>
-          This website contains links to external platforms, primarily <strong>Fiverr</strong>. We are not responsible for the content, availability, or terms of service of these third-party sites. Your interactions with such platforms are governed by their respective legal agreements.
+          This website may contain links to external professional platforms or software providers. We are not responsible for the content, availability, or terms of service of these third-party sites. Your interactions with such platforms are governed by their respective legal agreements.
         </p>
       </section>
 

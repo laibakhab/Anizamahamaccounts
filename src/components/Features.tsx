@@ -9,24 +9,12 @@ const reasons = [
     desc: "Professionally trained and certified to handle complex financial tasks."
   },
   {
-    title: "Fiverr Level 2 Seller",
-    desc: "A proven track record of excellence and high client satisfaction."
-  },
-  {
-    title: "3+ Years Experience",
-    desc: "Years of hands-on expertise in various accounting software and industries."
-  },
-  {
-    title: "Global Standards Compliance",
-    desc: "Strict adherence to IFRS, IASB, FASB, and IFAC regulations."
-  },
-  {
-    title: "Fast Turnaround Time",
-    desc: "Quick and efficient delivery without compromising on quality."
-  },
-  {
     title: "Accurate & Tax Ready",
     desc: "Meticulous reports that are ready for immediate tax filing and audits."
+  },
+  {
+    title: "IFRS & FASB Compliant",
+    desc: "Strict adherence to IFRS, IASB, FASB, and IFAC regulations."
   },
   {
     title: "Confidential & Secure",

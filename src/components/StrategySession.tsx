@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ShieldCheck, Zap, Star } from "lucide-react";
+import { Video, Clock, ArrowRight, Calendar, Star } from "lucide-react";
 import Link from "next/link";
 
-const FiverrPromotion = () => {
+const StrategySession = () => {
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       {/* Decorative patterns */}
@@ -24,51 +24,50 @@ const FiverrPromotion = () => {
           viewport={{ once: true }}
           className="bg-navy rounded-[40px] p-8 md:p-16 text-center shadow-2xl relative overflow-hidden"
         >
-          {/* Subtle Green Accent (Fiverr-like) */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 blur-[80px] rounded-full -mr-20 -mt-20" />
+          {/* Subtle Accent */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[80px] rounded-full -mr-20 -mt-20" />
           
           <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ scale: 0.9 }}
               whileInView={{ scale: 1 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-8 border border-green-500/20"
+              className="inline-flex items-center gap-2 bg-primary/20 text-accent-blue px-4 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-8 border border-primary/20"
             >
-              <Star size={16} fill="currentColor" />
-              Top Rated Service
+              <Video size={16} fill="currentColor" />
+              Free Strategy Session
             </motion.div>
 
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-              Hire Me on <span className="text-green-500 italic">Fiverr</span>
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+              30-Min <span className="text-primary">Complementary</span> Consultation
             </h2>
             
             <p className="text-xl text-white/70 mb-12 leading-relaxed">
-              Work with confidence through Fiverr's secure platform. Get expert bookkeeping services 
-              with guaranteed quality and safe payments.
+              Let's dive deep into your bookkeeping challenges. We'll identify bottlenecks and map out a path to perfectly organized, audit-ready books.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12">
               <div className="flex items-center gap-3 text-white/80">
-                <ShieldCheck className="text-green-500" size={24} />
-                <span className="font-bold">Secure Payments</span>
+                <Clock className="text-primary" size={24} />
+                <span className="font-bold">No Obligation</span>
               </div>
               <div className="flex items-center gap-3 text-white/80">
-                <Zap className="text-green-500" size={24} />
-                <span className="font-bold">Fast Delivery</span>
+                <Calendar className="text-primary" size={24} />
+                <span className="font-bold">Flexible Booking</span>
               </div>
               <div className="flex items-center gap-3 text-white/80">
-                <Star className="text-green-500" size={24} />
-                <span className="font-bold">Level 2 Seller</span>
+                <Star className="text-primary" size={24} />
+                <span className="font-bold">Expert Advice</span>
               </div>
             </div>
 
             <Link
-              href="https://www.fiverr.com/s/pdKEdLR"
+              href="https://calendly.com/ledgerly247/30min"
               target="_blank"
-              className="inline-flex items-center bg-green-500 text-white px-10 py-5 rounded-[20px] font-black text-xl hover:bg-white hover:text-navy transition-all shadow-2xl shadow-green-500/20 group"
+              className="inline-flex items-center bg-primary text-white px-10 py-5 rounded-[20px] font-black text-xl hover:bg-white hover:text-navy transition-all shadow-2xl shadow-primary/20 group"
             >
-              View Fiverr Gig
-              <ExternalLink className="ml-3 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+              Book Your Free Call
+              <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </motion.div>
@@ -77,4 +76,4 @@ const FiverrPromotion = () => {
   );
 };
 
-export default FiverrPromotion;
+export default StrategySession;

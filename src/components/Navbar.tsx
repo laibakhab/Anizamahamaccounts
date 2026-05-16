@@ -47,11 +47,11 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
-            href="https://wa.me/923155130326"
+            href="https://calendly.com/ledgerly247/30min"
             target="_blank"
-            className="bg-[#25D366] text-white px-6 py-2.5 rounded-[20px] font-semibold hover:bg-navy transition-all shadow-lg shadow-green-500/20 flex items-center"
+            className="bg-primary text-white px-6 py-2.5 rounded-[20px] font-semibold hover:bg-navy transition-all shadow-lg shadow-primary/20 flex items-center"
           >
-            Get Free Consultation
+            Book a Free Call
           </Link>
         </div>
 
@@ -87,12 +87,12 @@ const Navbar = () => {
                   </Link>
               </div>
               <Link
-                href="https://wa.me/923155130326"
+                href="https://calendly.com/ledgerly247/30min"
                 target="_blank"
-                className="bg-[#25D366] text-white text-center py-3 rounded-[20px] font-semibold flex items-center justify-center"
+                className="bg-primary text-white text-center py-3 rounded-[20px] font-semibold flex items-center justify-center"
                 onClick={() => setIsOpen(false)}
               >
-                WhatsApp
+                Book a Free Call
               </Link>
             </div>
           </motion.div>

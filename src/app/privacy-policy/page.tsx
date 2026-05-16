@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
           <li>To facilitate consultations and provide accurate service quotations.</li>
           <li>To perform agreed-upon bookkeeping, payroll, and financial reporting tasks.</li>
           <li>To ensure compliance with tax regulations and accounting standards (IFRS/GAAP).</li>
-          <li>To manage our professional relationship and coordinate services through the Fiverr platform.</li>
+          <li>To manage our professional relationship and coordinate services.</li>
         </ul>
       </section>
 
@@ -80,7 +80,7 @@ export default function PrivacyPolicy() {
       <section id="third-parties">
         <h2>6. Third-Party Platforms</h2>
         <p>
-          Our services are often facilitated through <strong>Fiverr</strong>. When engaging Aniza through Fiverr, your payment data and primary service communications are governed by Fiverr's own Privacy Policy. We also utilize Google Analytics for website performance monitoring and social media integrations for professional verification.
+          We utilize Google Analytics for website performance monitoring and social media integrations for professional verification. When engaging in services through third-party accounting software, your data is protected by their respective enterprise-grade security protocols.
         </p>
       </section>
 
@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
       <section id="contact">
         <h2>9. Contact Information</h2>
         <p>
-          For any inquiries regarding this Privacy Policy or the handling of your data, please reach out via the <strong>Contact Form</strong> on this website or directly through the Fiverr messaging system.
+          For any inquiries regarding this Privacy Policy or the handling of your data, please reach out via the <strong>Contact Form</strong> on this website.
         </p>
       </section>
     </PremiumLegalLayout>

@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Certified Accountant & Bookkeeper | QuickBooks, Xero, Zoho Expert",
-  description: "Professional bookkeeping and accounting services by Aniza, a certified accountant and Fiverr Level 2 Seller.",
+  description: "Professional bookkeeping and accounting services by Aniza, a certified accountant helping businesses stay financially organized.",
 };
 
 export default function RootLayout({

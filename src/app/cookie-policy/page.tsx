@@ -60,7 +60,6 @@ export default function CookiePolicy() {
           In addition to our first-party cookies, we also utilize third-party cookies from trusted partners:
         </p>
         <ul>
-          <li><strong>Fiverr:</strong> Used to track service referrals and ensure a smooth transition when you engage our services on their platform.</li>
           <li><strong>Video Hosting (YouTube/Vimeo):</strong> These platforms may set cookies to enable video playback of our introduction and promotional content.</li>
           <li><strong>Google Analytics:</strong> To help us measure traffic and usage statistics.</li>
         </ul>
