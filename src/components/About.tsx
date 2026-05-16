@@ -48,8 +48,7 @@ const About = () => {
             viewport={{ once: true }}
             className="lg:w-2/3"
           >
-            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Get to know me</span>
-            <h2 className="text-4xl md:text-5xl font-black text-navy mb-8">Meet Aniza</h2>
+            <h2 className="text-3xl md:text-5xl font-black text-navy mb-8">Get to know Founder and CEO</h2>
             
             <div className="space-y-6 text-lg text-secondary-text leading-relaxed mb-10">
               <p>

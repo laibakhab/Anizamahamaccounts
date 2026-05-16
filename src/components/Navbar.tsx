@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <img src="/images/logoo.png" alt="Aniza Accounting Logo" className="h-28 md:h-32 w-auto object-contain" />
+          <img src="/images/Led_logo.png" alt="Aniza Accounting Logo" className="h-28 md:h-32 w-auto object-contain" />
         </Link>
 
         {/* Desktop Links */}
@@ -82,8 +82,8 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="flex items-center gap-4 py-2 border-t border-border-custom pt-4 mt-2">
-                  <Link href="mailto:Ledgerly247@gmail.com" className="text-secondary-text hover:text-primary transition-colors text-sm font-bold">
-                    Ledgerly247@gmail.com
+                  <Link href="mailto:Aniza@ledgerly247.com" className="text-secondary-text hover:text-primary transition-colors text-sm font-bold">
+                    Aniza@ledgerly247.com
                   </Link>
               </div>
               <Link

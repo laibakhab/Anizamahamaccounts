@@ -66,7 +66,7 @@ const Contact = () => {
                 Let's Discuss Your Financial Goals
               </h2>
               <p className="text-lg text-secondary-text mb-12 leading-relaxed">
-                Ready to organize your business finances? Choose your preferred way to connect with me.
+                Ready to organize your business finances? Choose your preferred way to connect with us.
               </p>
 
               <div className="space-y-4">
@@ -109,7 +109,7 @@ const Contact = () => {
                 </Link>
 
                 <Link
-                  href="mailto:Ledgerly247@gmail.com"
+                  href="mailto:Aniza@ledgerly247.com"
                   className="flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group"
                 >
                   <div className="flex items-center gap-4">
@@ -118,7 +118,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-bold text-navy">Email</p>
-                      <p className="text-sm font-bold text-secondary-text">Ledgerly247@gmail.com</p>
+                      <p className="text-sm font-bold text-secondary-text">Aniza@ledgerly247.com</p>
                     </div>
                   </div>
                   <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
@@ -163,7 +163,7 @@ const Contact = () => {
                     <CheckCircle2 size={48} />
                   </div>
                   <h3 className="text-3xl font-black text-navy">Message Sent!</h3>
-                  <p className="text-secondary-text text-lg">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                  <p className="text-secondary-text text-lg">Thank you for reaching out. We'll get back to you within 24 hours.</p>
                   <button 
                     onClick={() => setIsSuccess(false)}
                     className="text-primary font-bold hover:underline"
@@ -202,7 +202,7 @@ const Contact = () => {
                       name="message"
                       required 
                       rows={5}
-                      placeholder="Tell me about your bookkeeping needs..."
+                      placeholder="Tell us about your bookkeeping needs..."
                       className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all resize-none"
                     ></textarea>
                   </div>

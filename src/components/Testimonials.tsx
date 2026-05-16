@@ -54,7 +54,7 @@ const Testimonials = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-black text-navy mb-6"
           >
-            What My Clients Say
+            What Our Clients Say
           </motion.h2>
         </div>
 

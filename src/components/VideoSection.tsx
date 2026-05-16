@@ -18,10 +18,10 @@ const VideoSection = () => {
             viewport={{ once: true }}
             className="mb-12"
           >
-            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Personal Introduction</span>
-            <h2 className="text-4xl md:text-5xl font-black text-navy mb-6">See How I Can Help Your Business</h2>
+            <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Our Process</span>
+            <h2 className="text-4xl md:text-5xl font-black text-navy mb-6">See How We Can Help Your Business</h2>
             <p className="text-lg text-secondary-text max-w-2xl mx-auto">
-              A brief overview of my bookkeeping process and how I ensure your financial records stay 100% accurate.
+              A brief overview of our bookkeeping process and how we ensure your financial records stay 100% accurate.
             </p>
           </motion.div>
 

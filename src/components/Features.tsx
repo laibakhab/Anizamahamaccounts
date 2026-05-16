@@ -36,10 +36,10 @@ const Features = () => {
           <div className="lg:w-1/3 lg:sticky lg:top-32">
             <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">The Advantage</span>
             <h2 className="text-4xl font-black text-navy mb-6 leading-tight">
-              Why Businesses Trust Me
+              Why Businesses Trust Us
             </h2>
             <p className="text-lg text-secondary-text leading-relaxed">
-              I combine international accounting standards with modern cloud technology to deliver results that help your business grow.
+              We combine international accounting standards with modern cloud technology to deliver results that help your business grow.
             </p>
           </div>
 

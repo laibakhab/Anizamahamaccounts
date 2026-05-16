@@ -7,27 +7,27 @@ import { ChevronDown, Plus, Minus, HelpCircle } from "lucide-react";
 const faqs = [
   {
     question: "Do you provide ongoing bookkeeping services?",
-    answer: "Yes, I provide comprehensive ongoing bookkeeping services tailored to your needs. These are available on a monthly, quarterly, or yearly basis to ensure your financials are always up-to-date and accurate."
+    answer: "Yes, we provide comprehensive ongoing bookkeeping services tailored to your needs. These are available on a monthly, quarterly, or yearly basis to ensure your financials are always up-to-date and accurate."
   },
   {
     question: "Which accounting software do you use?",
-    answer: "I am proficient in the industry's leading tools, including QuickBooks Online (Advanced ProAdvisor level), Xero, MS Excel, Zoho Books, and Wave Accounting. I can work with your existing setup or help you choose the best one for your business."
+    answer: "We are proficient in the industry's leading tools, including QuickBooks Online (Advanced ProAdvisor level), Xero, MS Excel, Zoho Books, and Wave Accounting. We can work with your existing setup or help you choose the best one for your business."
   },
   {
     question: "Can you clean up messy books?",
-    answer: "Absolutely! Catch-up and clean-up bookkeeping is one of my specialties. I'll organize your historical data, categorize transactions correctly, and ensure your books are 100% accurate and audit-ready, no matter how behind they are."
+    answer: "Absolutely! Catch-up and clean-up bookkeeping is one of our specialties. We'll organize your historical data, categorize transactions correctly, and ensure your books are 100% accurate and audit-ready, no matter how behind they are."
   },
   {
     question: "Do you prepare financial statements?",
-    answer: "Yes, I prepare a full suite of financial statements including Profit & Loss, Balance Sheets, and Cash Flow statements. These reports provide clear insights into your business's financial health and are prepared following international standards like IFRS."
+    answer: "Yes, we prepare a full suite of financial statements including Profit & Loss, Balance Sheets, and Cash Flow statements. These reports provide clear insights into your business's financial health and are prepared following international standards like IFRS."
   },
   {
     question: "Are your reports tax-ready?",
-    answer: "Yes. My goal is to ensure your bookkeeping is accurate throughout the year so that tax season is stress-free. All my reports are meticulously prepared to be tax-ready and comply with relevant regulations (IASB, FASB, IFAC)."
+    answer: "Yes. Our goal is to ensure your bookkeeping is accurate throughout the year so that tax season is stress-free. All our reports are meticulously prepared to be tax-ready and comply with relevant regulations (IASB, FASB, IFAC)."
   },
   {
     question: "How quickly can you deliver?",
-    answer: "Delivery time depends on the complexity and volume of the project. However, I am known for my fast turnaround times without compromising quality. For ongoing monthly bookkeeping, I provide regular updates based on our agreed-upon schedule."
+    answer: "Delivery time depends on the complexity and volume of the project. However, we are known for our fast turnaround times without compromising quality. For ongoing monthly bookkeeping, we provide regular updates based on our agreed-upon schedule."
   }
 ];
 
@@ -46,7 +46,7 @@ const FAQ = () => {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-secondary-text mb-10 leading-relaxed">
-              Find answers to the most common questions about my bookkeeping and accounting services.
+              Find answers to the most common questions about our bookkeeping and accounting services.
             </p>
             <div className="p-6 bg-secondary-bg rounded-[24px] border border-border-custom">
                 <div className="flex items-center gap-3 text-primary mb-3">
@@ -54,7 +54,7 @@ const FAQ = () => {
                     <span className="font-bold">Have more questions?</span>
                 </div>
                 <p className="text-sm text-secondary-text leading-relaxed">
-                    Feel free to reach out to me directly on Whatsapp or via the contact form for a custom consultation regarding your specific business needs.
+                    Feel free to reach out to us directly on Calendly, Whatsapp or via the contact form for a custom consultation regarding your specific business needs.
                 </p>
             </div>
           </div>

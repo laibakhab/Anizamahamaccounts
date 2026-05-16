@@ -128,7 +128,6 @@ const Services = () => {
               <div className="flex items-center gap-4 mb-10">
                 <div className="h-px bg-border-custom flex-grow" />
                 <h3 className="text-2xl font-black text-navy uppercase tracking-widest flex items-center gap-3">
-                  <span className="text-primary text-sm">0{catIndex + 1}</span>
                   {category.name}
                 </h3>
                 <div className="h-px bg-border-custom flex-grow" />

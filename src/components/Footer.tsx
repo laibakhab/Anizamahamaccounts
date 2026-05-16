@@ -21,12 +21,12 @@ const Footer = () => {
 
   const socialLinks = [
     { name: "LinkedIn", icon: LinkedInIcon, href: "https://www.linkedin.com/in/aniza-maham-005a66409/" },
-    { name: "Email", icon: MailIcon, href: "mailto:Ledgerly247@gmail.com" },
+    { name: "Email", icon: MailIcon, href: "mailto:Aniza@ledgerly247.com" },
   ];
 
   const quickLinks = [
     { name: "Services", href: "/#services" },
-    { name: "About Me", href: "/#about" },
+    { name: "About Founder", href: "/#about" },
     { name: "Software", href: "/#software" },
     { name: "Testimonials", href: "/#testimonials" },
     { name: "FAQs", href: "/#faq" },
@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Column 1: Brand & Bio */}
           <div className="lg:col-span-1">
             <Link href="/" className="mb-8 block">
-              <img src="/images/logoo.png" alt="Aniza Accounting Logo" className="h-24 md:h-28 w-auto object-contain" />
+              <img src="/images/Led_logo.png" alt="Aniza Accounting Logo" className="h-24 md:h-28 w-auto object-contain" />
             </Link>
             <p className="text-secondary-text leading-relaxed mb-8 max-w-xs">
               Certified accountant providing premium, cost-effective bookkeeping and accounting services to businesses worldwide.

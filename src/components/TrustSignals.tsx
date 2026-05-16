@@ -55,7 +55,7 @@ const TrustSignals = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-black text-navy mb-6"
           >
-            Tools I Work With
+            Tools We Work With
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -64,7 +64,7 @@ const TrustSignals = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-secondary-text leading-relaxed"
           >
-            I am proficient in the industry's leading cloud accounting software,
+            We are proficient in the industry's leading cloud accounting software,
             ensuring your data is handled with the best technology available.
           </motion.p>
         </div>
