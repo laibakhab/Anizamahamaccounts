@@ -21,7 +21,7 @@ const Footer = () => {
 
   const socialLinks = [
     { name: "LinkedIn", icon: LinkedInIcon, href: "https://www.linkedin.com/in/aniza-maham-005a66409/" },
-    { name: "Email", icon: MailIcon, href: "mailto:Aniza@ledgerly247.com" },
+    { name: "Email", icon: MailIcon, href: "mailto:Aniza@ledgerly247.com?subject=Contact%20Inquiry" },
   ];
 
   const quickLinks = [

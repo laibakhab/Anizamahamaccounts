@@ -12,14 +12,63 @@ import Link from "next/link";
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const copyEmail = (e: React.MouseEvent) => {
-    e.preventDefault();
-    navigator.clipboard.writeText("Aniza@ledgerly247.com");
+  const copyEmail = () => {
+    navigator.clipboard.writeText("aniza@ledgerly247.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-    // Also try to open the mail client
-    window.location.href = "mailto:Aniza@ledgerly247.com";
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    // Web3Forms Configuration
+    // Uses the key from your .env.local file
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    
+    if (!accessKey) {
+      console.error("Web3Forms Access Key is missing in .env.local");
+      setSubmitStatus("error");
+      setIsSubmitting(false);
+      return;
+    }
+
+    formData.append("access_key", accessKey); 
+    
+    // Email Delivery Settings for Namecheap Private Email
+    formData.append("from_name", formData.get("name") as string);
+    formData.append("replyto", formData.get("email") as string);
+    formData.append("subject", `New Website Inquiry: ${formData.get("subject") || "General"}`);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+    const data = await response.json();
+      console.log("Web3Forms Response:", data);
+
+      if (response.ok && data.success) {
+        setSubmitStatus("success");
+        form.reset();
+      } else {
+        console.error("Web3Forms Error:", data.message || "Unknown error");
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("Form submission network error:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -81,8 +130,13 @@ const Contact = () => {
                   </div>
                 </Link>
 
-                <button
-                  onClick={copyEmail}
+                <a
+                  href="mailto:aniza@ledgerly247.com?subject=Contact%20Inquiry"
+                  onMouseDown={() => {
+                    navigator.clipboard.writeText("aniza@ledgerly247.com");
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}
                   className="w-full flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group relative overflow-hidden"
                 >
                   <div className="flex items-center gap-4">
@@ -91,7 +145,7 @@ const Contact = () => {
                     </div>
                     <div className="text-left">
                       <p className="font-bold text-navy">Email</p>
-                      <p className="text-sm font-bold text-secondary-text">Aniza@ledgerly247.com</p>
+                      <p className="text-sm font-bold text-secondary-text">aniza@ledgerly247.com</p>
                     </div>
                   </div>
                   <div className="flex flex-col items-end">
@@ -102,7 +156,7 @@ const Contact = () => {
                       <Send size={20} />
                     </div>
                   </div>
-                </button>
+                </a>
                 {/* LinkedIn Card in Contact Section */}
                 <Link
                   href="https://www.linkedin.com/in/aniza-maham-005a66409/"
@@ -135,17 +189,9 @@ const Contact = () => {
               className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl border border-border-custom relative overflow-hidden"
             >
               <form 
-                action="https://formsubmit.co/Aniza@ledgerly247.com" 
-                method="POST"
+                onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                {/* Honeypot Spam Protection */}
-                <input type="text" name="_honey" className="hidden" />
-                {/* Disable Captcha */}
-                <input type="hidden" name="_captcha" value="false" />
-                {/* Subject Line */}
-                <input type="hidden" name="_subject" value="New Website Inquiry" />
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Name</label>
@@ -170,6 +216,17 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
+                  <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Subject</label>
+                  <input 
+                    type="text" 
+                    name="subject"
+                    required 
+                    placeholder="Inquiry Subject"
+                    className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
+                  />
+                </div>
+
+                <div className="space-y-2">
                   <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Message</label>
                   <textarea 
                     name="message"
@@ -182,11 +239,31 @@ const Contact = () => {
 
                 <button 
                   type="submit"
-                  className="w-full bg-primary text-white py-5 rounded-[20px] font-black text-xl hover:bg-navy transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3 group"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary text-white py-5 rounded-[20px] font-black text-xl hover:bg-navy transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Send Message
-                  <Send size={22} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                  <Send size={22} className={`${isSubmitting ? 'animate-pulse' : 'group-hover:translate-x-1 group-hover:-translate-y-1'} transition-transform`} />
                 </button>
+
+                {submitStatus === "success" && (
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-green-600 font-bold text-center mt-4"
+                  >
+                    Thank you! Your message has been sent successfully.
+                  </motion.p>
+                )}
+                {submitStatus === "error" && (
+                  <motion.p 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-600 font-bold text-center mt-4"
+                  >
+                    Something went wrong. Please try again.
+                  </motion.p>
+                )}
               </form>
             </motion.div>
           </div>
