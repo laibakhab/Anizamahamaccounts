@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Breadcrumb } from "./Breadcrumb";
 import { Clock, ShieldCheck, FileText, ChevronRight } from "lucide-react";
@@ -142,12 +143,12 @@ const PremiumLegalLayout: React.FC<PremiumLegalLayoutProps> = ({
                     <p className="text-xs text-white/70 mb-4 leading-relaxed">
                       If you have questions about our legal terms, feel free to reach out.
                     </p>
-                    <a 
+                    <Link 
                       href="/#contact" 
                       className="inline-block w-full text-center py-2.5 bg-primary rounded-lg text-xs font-bold hover:bg-white hover:text-navy transition-all"
                     >
                       Contact Aniza
-                    </a>
+                    </Link>
                   </div>
                   <FileText className="absolute -bottom-4 -right-4 w-24 h-24 text-white/5 -rotate-12" />
                 </div>

@@ -64,7 +64,7 @@ const TrustSignals = () => {
             transition={{ delay: 0.2 }}
             className="text-lg text-secondary-text leading-relaxed"
           >
-            We are proficient in the industry's leading cloud accounting software,
+            We are proficient in the industry&apos;s leading cloud accounting software,
             ensuring your data is handled with the best technology available.
           </motion.p>
         </div>

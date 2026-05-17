@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   Database, 
@@ -14,6 +15,7 @@ import {
   LineChart,
   CheckCircle2
 } from "lucide-react";
+import VideoModal from "./VideoModal";
 
 const serviceCategories = [
   {
@@ -90,6 +92,8 @@ const serviceCategories = [
 ];
 
 const Services = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-6 md:px-12">
@@ -197,15 +201,21 @@ const Services = () => {
                 >
                     Book a Free Consultation
                 </a>
-                <a 
-                    href="#contact" 
+                <button 
+                    onClick={() => setIsOpen(true)}
                     className="px-8 py-4 bg-white/10 text-white rounded-2xl font-bold hover:bg-white/20 transition-all border border-white/10"
                 >
                     View Our Process
-                </a>
+                </button>
             </div>
         </motion.div>
       </div>
+
+      <VideoModal 
+        isOpen={isOpen} 
+        onClose={() => setIsOpen(false)} 
+        videoSrc="/video/intro.mp4" 
+      />
     </section>
   );
 };

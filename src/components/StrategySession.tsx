@@ -43,7 +43,7 @@ const StrategySession = () => {
             </h2>
             
             <p className="text-xl text-white/70 mb-12 leading-relaxed">
-              Let's dive deep into your bookkeeping challenges. We'll identify bottlenecks and map out a path to perfectly organized, audit-ready books.
+              Let&apos;s dive deep into your bookkeeping challenges. We&apos;ll identify bottlenecks and map out a path to perfectly organized, audit-ready books.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12">

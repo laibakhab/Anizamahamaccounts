@@ -1,59 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   Mail, 
   Send, 
-  ExternalLink, 
   Phone,
-  CheckCircle2,
-  Loader2,
   CalendarDays
 } from "lucide-react";
 import Link from "next/link";
 
 const Contact = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState("");
+  const [copied, setCopied] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const copyEmail = (e: React.MouseEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError("");
-
-    const formData = new FormData(e.currentTarget);
-    // Uses the key from .env.local file
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "YOUR_ACCESS_KEY_HERE";
-    formData.append("access_key", accessKey);
-
-    try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setIsSuccess(true);
-        (e.target as HTMLFormElement).reset();
-      } else {
-        setError("Something went wrong. Please try again or use direct email.");
-      }
-    } catch (err) {
-      setError("Failed to send message. Please check your connection.");
-    } finally {
-      setIsSubmitting(false);
-    }
+    navigator.clipboard.writeText("Aniza@ledgerly247.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    // Also try to open the mail client
+    window.location.href = "mailto:Aniza@ledgerly247.com";
   };
 
   return (
     <section id="contact" className="py-24 bg-secondary-bg">
       <div className="container mx-auto px-6 md:px-12">
         <div className="flex flex-col lg:flex-row gap-16">
-          
+
           {/* Left Side: Info & Quick CTAs */}
           <div className="lg:w-2/5">
             <motion.div
@@ -63,7 +36,7 @@ const Contact = () => {
             >
               <span className="text-primary font-bold uppercase tracking-[0.2em] text-sm mb-4 block">Get In Touch</span>
               <h2 className="text-4xl md:text-5xl font-black text-navy mb-8 leading-tight">
-                Let's Discuss Your Financial Goals
+                Let&apos;s Discuss Your Financial Goals
               </h2>
               <p className="text-lg text-secondary-text mb-12 leading-relaxed">
                 Ready to organize your business finances? Choose your preferred way to connect with us.
@@ -108,24 +81,28 @@ const Contact = () => {
                   </div>
                 </Link>
 
-                <Link
-                  href="mailto:Aniza@ledgerly247.com"
-                  className="flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group"
+                <button
+                  onClick={copyEmail}
+                  className="w-full flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group relative overflow-hidden"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-100 text-primary rounded-full flex items-center justify-center">
                       <Mail size={24} />
                     </div>
-                    <div>
+                    <div className="text-left">
                       <p className="font-bold text-navy">Email</p>
                       <p className="text-sm font-bold text-secondary-text">Aniza@ledgerly247.com</p>
                     </div>
                   </div>
-                  <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Send size={20} />
+                  <div className="flex flex-col items-end">
+                    <div className={`text-[10px] font-black uppercase tracking-widest text-green-600 transition-all ${copied ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
+                      Copied!
+                    </div>
+                    <div className={`text-primary transition-all ${copied ? 'opacity-0' : 'opacity-100'}`}>
+                      <Send size={20} />
+                    </div>
                   </div>
-                </Link>
-                
+                </button>
                 {/* LinkedIn Card in Contact Section */}
                 <Link
                   href="https://www.linkedin.com/in/aniza-maham-005a66409/"
@@ -157,76 +134,60 @@ const Contact = () => {
               viewport={{ once: true }}
               className="bg-white p-8 md:p-12 rounded-[40px] shadow-2xl border border-border-custom relative overflow-hidden"
             >
-              {isSuccess ? (
-                <div className="text-center py-12 flex flex-col items-center justify-center space-y-6">
-                  <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                    <CheckCircle2 size={48} />
-                  </div>
-                  <h3 className="text-3xl font-black text-navy">Message Sent!</h3>
-                  <p className="text-secondary-text text-lg">Thank you for reaching out. We'll get back to you within 24 hours.</p>
-                  <button 
-                    onClick={() => setIsSuccess(false)}
-                    className="text-primary font-bold hover:underline"
-                  >
-                    Send another message
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Name</label>
-                      <input 
-                        type="text" 
-                        name="name"
-                        required 
-                        placeholder="Your Full Name"
-                        className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Email</label>
-                      <input 
-                        type="email" 
-                        name="email"
-                        required 
-                        placeholder="Your Email Address"
-                        className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
-                      />
-                    </div>
-                  </div>
+              <form 
+                action="https://formsubmit.co/Aniza@ledgerly247.com" 
+                method="POST"
+                className="space-y-6"
+              >
+                {/* Honeypot Spam Protection */}
+                <input type="text" name="_honey" className="hidden" />
+                {/* Disable Captcha */}
+                <input type="hidden" name="_captcha" value="false" />
+                {/* Subject Line */}
+                <input type="hidden" name="_subject" value="New Website Inquiry" />
 
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Message</label>
-                    <textarea 
-                      name="message"
+                    <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Name</label>
+                    <input 
+                      type="text" 
+                      name="name"
                       required 
-                      rows={5}
-                      placeholder="Tell us about your bookkeeping needs..."
-                      className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all resize-none"
-                    ></textarea>
+                      placeholder="Your Full Name"
+                      className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
+                    />
                   </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Email</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      required 
+                      placeholder="Your Email Address"
+                      className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all"
+                    />
+                  </div>
+                </div>
 
-                  {error && (
-                    <p className="text-red-500 text-sm font-medium">{error}</p>
-                  )}
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-navy uppercase tracking-widest ml-1">Message</label>
+                  <textarea 
+                    name="message"
+                    required 
+                    rows={5}
+                    placeholder="Tell us about your bookkeeping needs..."
+                    className="w-full px-6 py-4 bg-secondary-bg border border-border-custom rounded-[20px] focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/5 transition-all resize-none"
+                  ></textarea>
+                </div>
 
-                  <button 
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-primary text-white py-5 rounded-[20px] font-black text-xl hover:bg-navy transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3 group disabled:opacity-70 disabled:cursor-not-allowed"
-                  >
-                    {isSubmitting ? (
-                      <Loader2 className="animate-spin" size={24} />
-                    ) : (
-                      <>
-                        Send Message
-                        <Send size={22} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                      </>
-                    )}
-                  </button>
-                </form>
-              )}
+                <button 
+                  type="submit"
+                  className="w-full bg-primary text-white py-5 rounded-[20px] font-black text-xl hover:bg-navy transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-3 group"
+                >
+                  Send Message
+                  <Send size={22} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </button>
+              </form>
             </motion.div>
           </div>
 

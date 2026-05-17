@@ -82,7 +82,7 @@ export default function CookiePolicy() {
       <section id="contact">
         <h2>7. Contact & Inquiries</h2>
         <p>
-          If you have any questions about our use of cookies or other tracking technologies, please contact us through the website's contact form.
+          If you have any questions about our use of cookies or other tracking technologies, please contact us through the website&apos;s contact form.
         </p>
       </section>
     </PremiumLegalLayout>

@@ -56,7 +56,7 @@ export default function TermsOfService() {
       <section id="responsibilities">
         <h2>4. Client Responsibilities</h2>
         <p>
-          When inquiring about services, you agree to provide accurate and complete information regarding your business and financial requirements. You are responsible for ensuring that all data shared for the purpose of accounting services is legitimate and compliant with your local jurisdiction's financial regulations.
+          When inquiring about services, you agree to provide accurate and complete information regarding your business and financial requirements. You are responsible for ensuring that all data shared for the purpose of accounting services is legitimate and compliant with your local jurisdiction&apos;s financial regulations.
         </p>
       </section>
 

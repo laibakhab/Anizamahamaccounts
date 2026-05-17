@@ -48,14 +48,14 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
-                <Link 
+                <a 
                   key={social.name} 
                   href={social.href}
                   className="w-10 h-10 rounded-full border border-border-custom flex items-center justify-center text-navy hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
                   aria-label={social.name}
                 >
                   <social.icon />
-                </Link>
+                </a>
               ))}
             </div>
           </div>

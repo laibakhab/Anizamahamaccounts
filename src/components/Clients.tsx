@@ -131,7 +131,7 @@ const Clients = () => {
                 <Building2 size={32} />
             </div>
             <div>
-                <p className="text-white font-bold text-xl">Don't see your industry?</p>
+                <p className="text-white font-bold text-xl">Don&apos;t see your industry?</p>
                 <p className="text-white/60 text-sm font-medium">We specialize in creating custom financial workflows for unique business models.</p>
             </div>
           </div>
