@@ -157,9 +157,10 @@ const Contact = () => {
                   </div>
                 </a>
                 {/* LinkedIn Card in Contact Section */}
-                <Link
-                  href="https://www.linkedin.com/in/aniza-maham-005a66409/"
+                <a                                         
+                  href="https://linkedin.com/in/aniza-maham-005a66409"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group"
                 >
                   <div className="flex items-center gap-4">
@@ -174,7 +175,7 @@ const Contact = () => {
                   <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
                     <Send size={20} />
                   </div>
-                </Link>
+                </a>
               </div>
             </motion.div>
           </div>

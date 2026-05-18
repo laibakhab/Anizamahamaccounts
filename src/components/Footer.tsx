@@ -20,7 +20,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "LinkedIn", icon: LinkedInIcon, href: "https://www.linkedin.com/in/aniza-maham-005a66409/" },
+    { name: "LinkedIn", icon: LinkedInIcon, href: "https://linkedin.com/in/aniza-maham-005a66409" },
     { name: "Email", icon: MailIcon, href: "https://mail.google.com/mail/?view=cm&fs=1&to=Aniza@ledgerly247.com&su=Contact%20Inquiry" },
   ];
 
@@ -51,6 +51,8 @@ const Footer = () => {
                 <a 
                   key={social.name} 
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-border-custom flex items-center justify-center text-navy hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
                   aria-label={social.name}
                 >
