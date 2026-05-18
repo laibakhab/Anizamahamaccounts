@@ -6,7 +6,9 @@ import {
   Mail, 
   Send, 
   Phone,
-  CalendarDays
+  CalendarDays,
+  Copy,
+  Check
 } from "lucide-react";
 import Link from "next/link";
 
@@ -42,8 +44,14 @@ const Contact = () => {
 
     formData.append("access_key", accessKey); 
     
+    // Spam Prevention
+    formData.append("botcheck", "");
+    
+    // Explicitly set the recipient to ensure it goes to your mail
+    formData.append("to", "aniza@ledgerly247.com");
+    
     // Email Delivery Settings for Namecheap Private Email
-    formData.append("from_name", formData.get("name") as string);
+    formData.append("from_name", "Portfolio Inquiry - " + (formData.get("name") as string));
     formData.append("replyto", formData.get("email") as string);
     formData.append("subject", `New Website Inquiry: ${formData.get("subject") || "General"}`);
 
@@ -131,12 +139,8 @@ const Contact = () => {
                 </Link>
 
                 <a
-                  href="mailto:aniza@ledgerly247.com?subject=Contact%20Inquiry"
-                  onMouseDown={() => {
-                    navigator.clipboard.writeText("aniza@ledgerly247.com");
-                    setCopied(true);
-                    setTimeout(() => setCopied(false), 2000);
-                  }}
+                  href="https:///mail/?view=cm&fs=1&to=aniza@ledgerly247.com&su=Contact%20Inquiry"
+                  target="_blank"
                   className="w-full flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group relative overflow-hidden"
                 >
                   <div className="flex items-center gap-4">
@@ -148,13 +152,8 @@ const Contact = () => {
                       <p className="text-sm font-bold text-secondary-text">aniza@ledgerly247.com</p>
                     </div>
                   </div>
-                  <div className="flex flex-col items-end">
-                    <div className={`text-[10px] font-black uppercase tracking-widest text-green-600 transition-all ${copied ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
-                      Copied!
-                    </div>
-                    <div className={`text-primary transition-all ${copied ? 'opacity-0' : 'opacity-100'}`}>
-                      <Send size={20} />
-                    </div>
+                  <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Send size={20} />
                   </div>
                 </a>
                 {/* LinkedIn Card in Contact Section */}

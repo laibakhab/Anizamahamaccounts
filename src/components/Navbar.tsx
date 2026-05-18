@@ -82,7 +82,11 @@ const Navbar = () => {
                 </Link>
               ))}
               <div className="flex items-center gap-4 py-2 border-t border-border-custom pt-4 mt-2">
-                  <a href="mailto:Aniza@ledgerly247.com" className="text-secondary-text hover:text-primary transition-colors text-sm font-bold">
+                  <a 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=Aniza@ledgerly247.com" 
+                    target="_blank"
+                    className="text-secondary-text hover:text-primary transition-colors text-sm font-bold"
+                  >
                     Aniza@ledgerly247.com
                   </a>
               </div>
