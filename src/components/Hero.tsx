@@ -34,7 +34,7 @@ const Hero = () => {
             className="lg:w-1/2"
           >
             <span className="inline-block py-1.5 px-4 mb-6 text-sm font-bold tracking-wide text-primary uppercase bg-accent-blue rounded-full border border-primary/10">
-              Certified Accountant & Bookkeeper
+              Certified Accountants & Bookkeepers
             </span>
             
             <h1 className="text-4xl md:text-6xl font-extrabold text-navy leading-[1.1] mb-6">

@@ -194,8 +194,8 @@ const Services = () => {
                 Ready to stabilize your financial foundation?
             </h3>
             <div className="flex flex-wrap justify-center gap-4 relative z-10">
-                <a 
-                    href="https://wa.me/923155130326" 
+                <a
+                    href="https://calendly.com/ledgerly247/30min"
                     target="_blank"
                     className="px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-white hover:text-navy transition-all shadow-lg"
                 >
