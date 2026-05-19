@@ -139,7 +139,7 @@ const Contact = () => {
                 </Link>
 
                 <a
-                  href="https:///mail/?view=cm&fs=1&to=aniza@ledgerly247.com&su=Contact%20Inquiry"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=aniza@ledgerly247.com&su=Contact%20Inquiry"
                   target="_blank"
                   className="w-full flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group relative overflow-hidden"
                 >
