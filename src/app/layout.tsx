@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Certified Accountant & Bookkeeper | QuickBooks, Xero, Zoho Expert",
+  title: "Ledgerly 24/7 | Certified Accountant & Bookkeeper",
   description: "Professional bookkeeping and accounting services by Aniza, a certified accountant helping businesses stay financially organized.",
 };
 

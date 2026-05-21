@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import PremiumLegalLayout from "@/components/PremiumLegalLayout";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Aniza Accounting & Bookkeeping",
+  title: "Cookie Policy | Ledgerly 24/7",
   description: "Detailed information on how we use cookies to enhance your experience and optimize our accounting portfolio website.",
 };
 
@@ -34,7 +34,7 @@ export default function CookiePolicy() {
       <section id="how-we-use">
         <h2>2. How We Use Cookies</h2>
         <p>
-          At <strong>Aniza Accounting & Bookkeeping</strong>, we use cookies to improve the efficiency and security of our platform. Specifically, cookies help us:
+          At <strong>Ledgerly 24/7</strong>, we use cookies to improve the efficiency and security of our platform. Specifically, cookies help us:
         </p>
         <ul>
           <li><strong>Optimize Performance:</strong> Ensuring the website loads quickly and functions smoothly across all devices.</li>

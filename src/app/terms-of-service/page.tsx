@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import PremiumLegalLayout from "@/components/PremiumLegalLayout";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | Aniza Accounting & Bookkeeping",
-  description: "Professional terms and conditions for engaging Aniza Accounting & Bookkeeping services.",
+  title: "Terms of Service | Ledgerly 24/7",
+  description: "Professional terms and conditions for engaging Ledgerly 24/7 services.",
 };
 
 export default function TermsOfService() {
@@ -29,7 +29,7 @@ export default function TermsOfService() {
       <section id="acceptance">
         <h2>1. Acceptance of Terms</h2>
         <p>
-          By accessing and navigating this website, you agree to comply with and be bound by the following Terms of Service. These terms govern your relationship with <strong>Aniza Accounting & Bookkeeping</strong> in relation to this website and any preliminary professional inquiries.
+          By accessing and navigating this website, you agree to comply with and be bound by the following Terms of Service. These terms govern your relationship with <strong>Ledgerly 24/7</strong> in relation to this website and any preliminary professional inquiries.
         </p>
       </section>
 
@@ -63,7 +63,7 @@ export default function TermsOfService() {
       <section id="ip">
         <h2>5. Intellectual Property</h2>
         <p>
-          All content featured on this website—including text, graphics, logos, and service descriptions—is the exclusive property of <strong>Aniza Accounting & Bookkeeping</strong>. Unauthorized reproduction, distribution, or modification of any material is strictly prohibited.
+          All content featured on this website—including text, graphics, logos, and service descriptions—is the exclusive property of <strong>Ledgerly 24/7</strong>. Unauthorized reproduction, distribution, or modification of any material is strictly prohibited.
         </p>
       </section>
 
@@ -77,7 +77,7 @@ export default function TermsOfService() {
       <section id="limitation">
         <h2>7. Limitation of Liability</h2>
         <p>
-          In no event shall Aniza Accounting & Bookkeeping be liable for any indirect, consequential, or incidental damages arising out of the use of this website or the information contained herein. We strive for 100% accuracy, but we do not warrant that the website is free from technical errors or omissions.
+          In no event shall Ledgerly 24/7 be liable for any indirect, consequential, or incidental damages arising out of the use of this website or the information contained herein. We strive for 100% accuracy, but we do not warrant that the website is free from technical errors or omissions.
         </p>
       </section>
 

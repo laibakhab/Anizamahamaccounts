@@ -2,8 +2,8 @@ import { Metadata } from "next";
 import PremiumLegalLayout from "@/components/PremiumLegalLayout";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Aniza Accounting & Bookkeeping",
-  description: "Learn how Aniza Accounting & Bookkeeping handles your sensitive financial data and personal information with the highest professional standards.",
+  title: "Privacy Policy | Ledgerly 24/7",
+  description: "Learn how Ledgerly 24/7 handles your sensitive financial data and personal information with the highest professional standards.",
 };
 
 export default function PrivacyPolicy() {
@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
       <section id="introduction">
         <h2>1. Introduction</h2>
         <p>
-          At <strong>Aniza Accounting & Bookkeeping</strong>, we recognize that trust is the foundation of every professional relationship. As a certified accounting practice, the privacy and security of your financial and personal data are our highest priorities. This policy outlines our standards for collecting, processing, and safeguarding your information in compliance with international data protection regulations.
+          At <strong>Ledgerly 24/7</strong>, we recognize that trust is the foundation of every professional relationship. As a certified accounting practice, the privacy and security of your financial and personal data are our highest priorities. This policy outlines our standards for collecting, processing, and safeguarding your information in compliance with international data protection regulations.
         </p>
       </section>
 

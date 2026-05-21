@@ -18,6 +18,7 @@ const testimonials = [
   { image: "/images/r13.jpeg" },
 ];
 
+
 const Testimonials = () => {
   const [current, setCurrent] = useState(0);
 

@@ -41,7 +41,7 @@ const Footer = () => {
           {/* Column 1: Brand & Bio */}
           <div className="lg:col-span-1">
             <Link href="/" className="mb-8 block">
-              <img src="/images/Led_logo.png" alt="Aniza Accounting Logo" className="h-24 md:h-28 w-auto object-contain" />
+              <img src="/images/Led_logo.png" alt="Ledgerly 24/7 Logo" className="h-24 md:h-28 w-auto object-contain" />
             </Link>
             <p className="text-secondary-text leading-relaxed mb-8 max-w-xs">
               Certified accountant providing premium, cost-effective bookkeeping and accounting services to businesses worldwide.
@@ -127,7 +127,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-12 border-t border-border-custom flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-secondary-text text-sm font-medium">
-            © {currentYear} Aniza Maham Accounting. Developed for Excellence.
+            © {currentYear} Ledgerly 24/7. Developed for Excellence.
           </p>
           <div className="flex gap-8 text-sm font-medium text-secondary-text">
             <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>

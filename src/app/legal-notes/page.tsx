@@ -3,8 +3,8 @@ import PremiumLegalLayout from "@/components/PremiumLegalLayout";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Legal Notes | Aniza Accounting & Bookkeeping",
-  description: "Official legal documentation and professional disclaimers for Aniza Accounting & Bookkeeping portfolio website.",
+  title: "Legal Notes | Ledgerly 24/7",
+  description: "Official legal documentation and professional disclaimers for Ledgerly 24/7 portfolio website.",
 };
 
 export default function LegalNotes() {
