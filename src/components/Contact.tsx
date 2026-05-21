@@ -7,21 +7,19 @@ import {
   Send, 
   Phone,
   CalendarDays,
-  Copy,
-  Check
+  MapPin,
+  Navigation
 } from "lucide-react";
 import Link from "next/link";
 
 const Contact = () => {
-  const [copied, setCopied] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText("aniza@ledgerly247.com");
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
+  const officeAddress = "67 West St, Brooklyn, NY 11222";
+  
+  // Using a standard embed URL without API key for simplicity
+  const simpleMapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.63318991395!2d-73.9622226!3d40.7261111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2593f7f4f1d4b%3A0x673c683c34f828a1!2s67%20West%20St%2C%20Brooklyn%2C%20NY%2011222%2C%20USA!5e0!3m2!1sen!2s!4v1716300000000!5m2!1sen!2s";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,9 +28,6 @@ const Contact = () => {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
-    // Web3Forms Configuration
-    // Uses the key from your .env.local file
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
     
     if (!accessKey) {
@@ -43,14 +38,8 @@ const Contact = () => {
     }
 
     formData.append("access_key", accessKey); 
-    
-    // Spam Prevention
     formData.append("botcheck", "");
-    
-    // Explicitly set the recipient to ensure it goes to your mail
     formData.append("to", "aniza@ledgerly247.com");
-    
-    // Email Delivery Settings for Namecheap Private Email
     formData.append("from_name", "Portfolio Inquiry - " + (formData.get("name") as string));
     formData.append("replyto", formData.get("email") as string);
     formData.append("subject", `New Website Inquiry: ${formData.get("subject") || "General"}`);
@@ -61,18 +50,14 @@ const Contact = () => {
         body: formData
       });
 
-    const data = await response.json();
-      console.log("Web3Forms Response:", data);
-
+      const data = await response.json();
       if (response.ok && data.success) {
         setSubmitStatus("success");
         form.reset();
       } else {
-        console.error("Web3Forms Error:", data.message || "Unknown error");
         setSubmitStatus("error");
       }
     } catch (error) {
-      console.error("Form submission network error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -156,7 +141,8 @@ const Contact = () => {
                     <Send size={20} />
                   </div>
                 </a>
-                {/* LinkedIn Card in Contact Section */}
+
+                {/* LinkedIn Card */}
                 <a                                         
                   href="https://linkedin.com/in/aniza-maham-005a66409"
                   target="_blank"
@@ -170,6 +156,27 @@ const Contact = () => {
                     <div>
                       <p className="font-bold text-navy">LinkedIn</p>
                       <p className="text-xs text-secondary-text font-medium uppercase tracking-widest">Professional Profile</p>
+                    </div>
+                  </div>
+                  <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Send size={20} />
+                  </div>
+                </a>
+
+                {/* Office Address Card */}
+                <a 
+                  href="https://maps.google.com/?q=67+West+St,+Brooklyn,+NY+11222" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between p-6 bg-white rounded-[24px] border border-border-custom hover:border-primary hover:shadow-xl transition-all group"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 bg-navy/5 text-navy rounded-full flex items-center justify-center">
+                      <MapPin size={24} />
+                    </div>
+                    <div>
+                      <p className="font-bold text-navy">Office Address</p>
+                      <p className="text-sm font-bold text-secondary-text">{officeAddress}</p>
                     </div>
                   </div>
                   <div className="text-primary opacity-0 group-hover:opacity-100 transition-opacity">

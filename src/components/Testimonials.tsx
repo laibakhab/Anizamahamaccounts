@@ -11,11 +11,9 @@ const testimonials = [
   { image: "/images/r4.jpeg" },
   { image: "/images/r5.jpeg" },
   { image: "/images/r6.jpeg" },
-  { image: "/images/r7.jpeg" },
   { image: "/images/r8.jpeg" },
   { image: "/images/r9.jpeg" },
   { image: "/images/r10.jpeg" },
-  { image: "/images/r11.jpeg" },
   { image: "/images/r12.jpeg" },
   { image: "/images/r13.jpeg" },
 ];
