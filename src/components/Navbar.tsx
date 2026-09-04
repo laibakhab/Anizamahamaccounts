@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, ChevronDown, Calendar, MessageCircle, Mail } from "lucide-react";
+import { Menu, X, ChevronDown, MessageCircle, Mail, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -40,9 +40,9 @@ const Navbar = () => {
 
   const callOptions = [
     {
-      name: "Book a Free Discovery Call",
-      href: "https://calendly.com/ledgerly247/30min",
-      icon: <Calendar size={18} />,
+      name: "Complete our Get Started form",
+      href: "/get-started",
+      icon: <ArrowRight size={18} />,
       color: "bg-blue-50 text-blue-600",
     },
     {
@@ -53,7 +53,7 @@ const Navbar = () => {
     },
     {
       name: "Send an Email",
-      href: "https://mail.google.com/mail/?view=cm&fs=1&to=aniza@ledgerly247.com&su=Contact%20Inquiry",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=Bookkeepingbyaniza@gmail.com&su=Contact%20Inquiry",
       icon: <Mail size={18} />,
       color: "bg-purple-50 text-purple-600",
     },
@@ -159,11 +159,11 @@ const Navbar = () => {
               ))}
               <div className="flex items-center gap-4 py-2 border-t border-border-custom pt-4 mt-2">
                   <a 
-                    href="https://mail.google.com/mail/?view=cm&fs=1&to=Aniza@ledgerly247.com" 
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=Bookkeepingbyaniza@gmail.com" 
                     target="_blank"
                     className="text-secondary-text hover:text-primary transition-colors text-sm font-bold"
                   >
-                    Aniza@ledgerly247.com
+                    Bookkeepingbyaniza@gmail.com
                   </a>
               </div>
               

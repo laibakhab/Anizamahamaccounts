@@ -136,11 +136,11 @@ const Clients = () => {
             </div>
           </div>
           <a 
-            href="https://calendly.com/ledgerly247/30min"
+            href="https://wa.me/923155130326"
             target="_blank"
             className="px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-white hover:text-navy transition-all shadow-xl"
           >
-            Schedule a Discovery Call
+            Message Us on WhatsApp
           </a>
         </motion.div>
       </div>

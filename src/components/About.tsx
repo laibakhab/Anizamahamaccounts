@@ -107,11 +107,11 @@ const About = () => {
 
             <div className="flex flex-wrap gap-6">
               <Link
-                href="https://calendly.com/ledgerly247/30min"
+                href="https://wa.me/923155130326"
                 target="_blank"
                 className="bg-primary text-white px-10 py-5 rounded-[20px] font-bold text-lg hover:bg-navy transition-all shadow-xl shadow-primary/20"
               >
-                Free 30-Min Consultation
+                Message Us on WhatsApp
               </Link>
             </div>
           </motion.div>

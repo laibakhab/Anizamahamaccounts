@@ -20,8 +20,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: "LinkedIn", icon: LinkedInIcon, href: "https://linkedin.com/in/aniza-maham-005a66409" },
-    { name: "Email", icon: MailIcon, href: "https://mail.google.com/mail/?view=cm&fs=1&to=Aniza@ledgerly247.com&su=Contact%20Inquiry" },
+    { name: "LinkedIn", icon: LinkedInIcon, href: "https://www.linkedin.com/in/aniza-maham-86ba6041a/" },
+    { name: "Email", icon: MailIcon, href: "https://mail.google.com/mail/?view=cm&fs=1&to=Bookkeepingbyaniza@gmail.com&su=Contact%20Inquiry" },
   ];
 
   const quickLinks = [
@@ -107,16 +107,16 @@ const Footer = () => {
           <div>
             <h4 className="font-black text-navy text-lg mb-8 uppercase tracking-widest text-sm">Consultation</h4>
             <div className="bg-secondary-bg p-6 rounded-[24px] border border-border-custom">
-              <p className="text-navy font-bold mb-4">Book a Strategy Call</p>
+              <p className="text-navy font-bold mb-4">Message Us on WhatsApp</p>
               <p className="text-secondary-text text-sm mb-6 leading-relaxed">
-                Schedule your free 30-minute complementary consultation to discuss your business.
+                Send us a message to discuss your bookkeeping and accounting needs.
               </p>
               <Link
-                href="https://calendly.com/ledgerly247/30min"
+                href="https://wa.me/923155130326"
                 target="_blank"
                 className="inline-flex items-center gap-2 bg-navy text-white px-5 py-3 rounded-xl font-bold text-sm hover:bg-primary transition-all shadow-lg"
               >
-                Book Session
+                Open WhatsApp
                 <ExternalLink size={14} />
               </Link>
             </div>

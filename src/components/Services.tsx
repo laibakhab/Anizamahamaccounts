@@ -195,11 +195,11 @@ const Services = () => {
             </h3>
             <div className="flex flex-wrap justify-center gap-4 relative z-10">
                 <a
-                    href="https://calendly.com/ledgerly247/30min"
+                    href="https://wa.me/923155130326"
                     target="_blank"
                     className="px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-white hover:text-navy transition-all shadow-lg"
                 >
-                    Book a Free Consultation
+                    Message Us on WhatsApp
                 </a>
                 <button 
                     onClick={() => setIsOpen(true)}

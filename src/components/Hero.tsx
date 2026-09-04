@@ -48,11 +48,10 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8">
               <Link
-                href="https://calendly.com/ledgerly247/30min"
-                target="_blank"
+                href="/get-started"
                 className="bg-primary text-white px-8 py-4 rounded-[20px] font-bold text-lg hover:bg-navy transition-all shadow-xl shadow-primary/20 flex items-center group"
               >
-                Free 30-Min Consultation
+                Get Started
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </Link>
               <motion.button 
