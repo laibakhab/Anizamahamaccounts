@@ -77,7 +77,7 @@ const About = () => {
             
             <div className="space-y-6 text-lg text-secondary-text leading-relaxed mb-10">
               <p>
-                I am a dedicated and certified accountant with over <span className="text-navy font-bold">3+ years of hands-on experience</span> in the world of bookkeeping and financial management. My mission is to provide businesses with the clarity and organization they need to thrive.
+                I am a dedicated and certified accountant with over <span className="text-navy font-bold">8+ years of hands-on experience</span> in the world of bookkeeping and financial management. My mission is to provide businesses with the clarity and organization they need to thrive.
               </p>
               <p>
                 I specialize in high-quality bookkeeping services that strictly comply with international standards, including <span className="text-navy font-bold">IFRS, IASB, FASB, and IFAC</span>. Whether it&apos;s catching up on months of overdue books or setting up robust financial systems, I ensure your records are 100% accurate and audit-ready.
@@ -91,7 +91,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
               {[
                 { label: "Certified Accountant", icon: Award },
-                { label: "3+ Years Experience", icon: Clock },
+                { label: "8+ Years Experience", icon: Clock },
                 { label: "IFRS & FASB Compliant", icon: CheckCircle2 },
                 { label: "Cost-Effective Services", icon: DollarSign },
                 { label: "Confidential & Secure", icon: Lock },

@@ -140,7 +140,7 @@ const Clients = () => {
             target="_blank"
             className="px-8 py-4 bg-primary text-white rounded-2xl font-bold hover:bg-white hover:text-navy transition-all shadow-xl"
           >
-            Message Us on WhatsApp
+            Reach Out to Us
           </a>
         </motion.div>
       </div>

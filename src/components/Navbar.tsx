@@ -92,7 +92,7 @@ const Navbar = () => {
               onClick={() => setShowCallDropdown(!showCallDropdown)}
               className="bg-primary text-white px-6 py-2.5 rounded-[20px] font-semibold hover:bg-navy transition-all shadow-lg shadow-primary/20 flex items-center gap-2 group"
             >
-              Book a Free Call
+              Get Started
               <ChevronDown 
                 size={18} 
                 className={`transition-transform duration-300 ${showCallDropdown ? "rotate-180" : ""}`} 
@@ -163,7 +163,7 @@ const Navbar = () => {
                     target="_blank"
                     className="text-secondary-text hover:text-primary transition-colors text-sm font-bold"
                   >
-                    Bookkeepingbyaniza@gmail.com
+                    Professional Email
                   </a>
               </div>
               

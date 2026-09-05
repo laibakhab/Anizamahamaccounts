@@ -39,7 +39,7 @@ const AnimatedCounter = ({ value, suffix = "", duration = 2 }: CounterProps) => 
 
 const Stats = () => {
   const stats = [
-    { label: "Years Experience", value: 3, suffix: "+" },
+    { label: "Years Experience", value: 8, suffix: "+" },
     { label: "Projects Completed", value: 100, suffix: "+" },
     { label: "Happy Clients", value: 50, suffix: "+" },
     { label: "Client Satisfaction", value: 100, suffix: "%" },

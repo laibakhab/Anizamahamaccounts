@@ -54,7 +54,7 @@ const FAQ = () => {
                     <span className="font-bold">Have more questions?</span>
                 </div>
                 <p className="text-sm text-secondary-text leading-relaxed">
-                    Feel free to reach out to us directly on Calendly, Whatsapp or via the contact form for a custom consultation regarding your specific business needs.
+                    Feel free to reach out to us directly on Form, Whatsapp or via the contact form for a custom consultation regarding your specific business needs.
                 </p>
             </div>
           </div>

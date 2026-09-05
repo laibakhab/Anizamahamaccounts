@@ -17,7 +17,7 @@ const Contact = () => {
             <p className="mb-10 text-lg leading-relaxed text-secondary-text">Ready to organize your business finances? Start with our short intake form or choose another way to connect.</p>
             <div className="space-y-4">
               <ContactLink href="https://wa.me/923155130326" icon={<Phone size={24} />} title="WhatsApp" detail="Quick chat" iconClass="bg-green-100 text-green-600" />
-              <ContactLink href="https://mail.google.com/mail/?view=cm&fs=1&to=Bookkeepingbyaniza@gmail.com&su=Contact%20Inquiry" icon={<Mail size={24} />} title="Email" detail="Bookkeepingbyaniza@gmail.com" iconClass="bg-blue-100 text-primary" />
+              <ContactLink href="https://mail.google.com/mail/?view=cm&fs=1&to=Bookkeepingbyaniza@gmail.com&su=Contact%20Inquiry" icon={<Mail size={24} />} title="Email" detail="Professional contact" iconClass="bg-blue-100 text-primary" />
               <ContactLink href="https://www.linkedin.com/in/aniza-maham-86ba6041a/" icon={<span className="text-xl font-black">in</span>} title="LinkedIn" detail="Professional profile" iconClass="bg-blue-50 text-[#0077B5]" />
               <ContactLink href="https://maps.google.com/?q=67+West+St,+Brooklyn,+NY+11222" icon={<MapPin size={24} />} title="Office Address" detail={officeAddress} iconClass="bg-navy/5 text-navy" />
             </div>

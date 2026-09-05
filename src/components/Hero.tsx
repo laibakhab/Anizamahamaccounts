@@ -77,7 +77,7 @@ const Hero = () => {
                   <span className="text-[10px]">🇵🇰</span>
                 </div>
               </div>
-              <span className="text-sm font-bold text-navy">Offices in New York & Pakistan</span>
+              <span className="text-sm font-bold text-navy">New york City, Miami, London and More</span>
             </div>
 
             {/* Trust Badges */}
@@ -158,7 +158,7 @@ const Hero = () => {
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-4 -right-12 md:top-12 md:-right-20 bg-navy text-white w-24 h-24 md:w-32 md:h-32 rounded-full flex flex-col items-center justify-center text-center p-4 shadow-2xl z-20"
             >
-              <p className="text-2xl md:text-3xl font-black leading-none">3+</p>
+              <p className="text-2xl md:text-3xl font-black leading-none">8+</p>
               <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest mt-1">Years of Experience</p>
             </motion.div>
 
