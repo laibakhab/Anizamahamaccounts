@@ -42,7 +42,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-secondary-text mb-10 leading-relaxed max-w-xl">
-              Trusted by construction companies, architects, attorneys, designers, consultants, and small businesses in New York City, Miami, and London.
+              Trusted by construction companies, architects, attorneys, designers, consultants, and small businesses in New York City, Miami, London and more.
             </p>
 
             {/* CTA Buttons */}
